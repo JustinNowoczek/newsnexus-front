@@ -129,15 +129,33 @@ table {
 }
 
 #root {
-	--dark: rgb(13, 9, 34);
+	--dark: rgb(11, 8, 29);
 	--main: rgb(33, 25, 66);
 	--light: rgb(125, 112, 180);
+
 	background-color: var(--dark);
+	padding-bottom: 5px;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	color: var(--light);
 
-	font-weight: 700;
+	font-weight: 800;
 	font-family: nunito;
+
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	h4 {
+		font-size: 12px;
+	}
 }
 
