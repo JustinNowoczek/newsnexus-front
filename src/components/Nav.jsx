@@ -1,9 +1,10 @@
 import React from 'react'
+import logo from '../assets/newsnexus.svg'
 
 export default function Nav({ setFilters, filters }) {
 	return (
 		<nav>
-			<img src="./public/newsnexus.svg" alt="Logo" width={100} />
+			<img src={logo} alt="Logo" width={100} />
 			<h1>
 				News <br /> Nexus
 			</h1>
