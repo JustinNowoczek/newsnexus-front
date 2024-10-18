@@ -11,6 +11,13 @@ function App() {
 	const [articles, setArticles] = useState([])
 	const [focusedArticle, setFocusedArticle] = useState(null)
 	const [filters, setFilters] = useState({ city: '', tag: '', undefinedCityOnly: true })
+	const [cityList, setCityList] = useState([])
+
+	useEffect(() => {
+		fetch('https://newsnexus-in05.onrender.com/api/news/cities')
+			.then((r) => r.json())
+			.then(setCityList)
+	}, [])
 
 	useEffect(() => {
 		let url = 'https://newsnexus-in05.onrender.com/api/news/articles'
@@ -37,6 +44,8 @@ function App() {
 			url += 'tag=' + t
 		}
 
+		console.log(url)
+
 		fetch(url)
 			.then((r) => r.json())
 			.then(setArticles)
@@ -44,7 +53,7 @@ function App() {
 
 	return (
 		<>
-			<Nav setFilters={setFilters} filters={filters} />
+			<Nav setFilters={setFilters} filters={filters} cityList={cityList} />
 			{articles.length !== 0 ? (
 				<main>
 					{articles.map((a) => (

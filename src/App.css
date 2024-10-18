@@ -12,9 +12,27 @@ nav {
 
 		label {
 			display: flex;
+			position: relative;
 			flex-direction: column;
 			gap: 10px;
 			text-align: center;
+
+			.menu {
+				position: absolute;
+				top: 60px;
+				z-index: 60;
+				background-color: var(--dark);
+				width: max-content;
+				text-align: left;
+
+				p {
+					padding: 5px;
+
+					&:hover {
+						filter: brightness(1.7);
+					}
+				}
+			}
 
 			input {
 				&:not([type='checkbox']) {
