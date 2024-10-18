@@ -18,7 +18,7 @@ function App() {
 		let { city: c, tag: t, undefinedCityOnly: uCO } = filters
 
 		if (uCO) {
-			c = 'null'
+			c = 'noCity'
 		}
 
 		if (c || t) {
