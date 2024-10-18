@@ -44,8 +44,6 @@ function App() {
 			url += 'tag=' + t
 		}
 
-		console.log(url)
-
 		fetch(url)
 			.then((r) => r.json())
 			.then(setArticles)
