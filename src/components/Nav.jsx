@@ -11,6 +11,7 @@ export default function Nav({ setFilters, filters }) {
 				<label>
 					Filter by City
 					<input
+						placeholder="e.g. New York City"
 						value={filters.city}
 						onChange={({ target }) => {
 							setFilters((p) => ({ ...p, city: target.value }))
@@ -32,6 +33,7 @@ export default function Nav({ setFilters, filters }) {
 				<label>
 					Filter by Tag
 					<input
+						placeholder="e.g. Money"
 						value={filters.tag}
 						onChange={({ target }) => {
 							setFilters((p) => ({ ...p, tag: target.value }))

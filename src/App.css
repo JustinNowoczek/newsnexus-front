@@ -13,12 +13,15 @@ nav {
 		label {
 			display: flex;
 			flex-direction: column;
+			gap: 10px;
 			text-align: center;
 
 			input {
 				&:not([type='checkbox']) {
 					all: unset;
+					border-radius: 4px;
 					background-color: var(--dark);
+					padding: 5px 10px;
 					color: var(--light);
 				}
 
@@ -94,6 +97,13 @@ main {
 			border: 1px solid var(--light);
 		}
 	}
+}
+
+.noArticles {
+	margin-top: 50px;
+	padding: 20px;
+	font-size: 24px;
+	text-align: center;
 }
 
 .bg {

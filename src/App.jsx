@@ -45,13 +45,17 @@ function App() {
 	return (
 		<>
 			<Nav setFilters={setFilters} filters={filters} />
-			<main>
-				{articles.map((a) => (
-					<React.Fragment key={a.id}>
-						<Article data={a} setFocusedArticle={setFocusedArticle} />
-					</React.Fragment>
-				))}
-			</main>
+			{articles.length !== 0 ? (
+				<main>
+					{articles.map((a) => (
+						<React.Fragment key={a.id}>
+							<Article data={a} setFocusedArticle={setFocusedArticle} />
+						</React.Fragment>
+					))}
+				</main>
+			) : (
+				<p className="noArticles">No articles Available</p>
+			)}
 
 			{focusedArticle && (
 				<FocusedArticle
