@@ -135,7 +135,7 @@ table {
 
 	background-color: var(--dark);
 	padding-bottom: 5px;
-	width: 50vw;
+	width: 100%;
 	min-height: 100vh;
 	color: var(--light);
 
